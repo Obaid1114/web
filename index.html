@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY | WEBSITE STRUCTURE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7596274027200337"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WEB STRUCTURE<h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contect Us</li>
+                <li id="open-more-nav"><i class="fa">&#xf0dd;</i></li>
+                <li id="close-more-nav" style="display: none;"><i class="fa">&#xf0de;</i></li>
+            </ul>
+        </div>
+        <div class="more-nav" id="more-nav">
+            <ul>
+                <li>Page</li>
+                <li>Group</li>
+                <li>Massage</li>
+            </ul>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#open-more-nav").click(function(){
+                $("#more-nav").slideDown();
+                $("#open-more-nav").hide();
+                $("#close-more-nav").show();
+            });
+
+            $("#close-more-nav").click(function(){
+                $("#more-nav").slideUp();
+                $("#close-more-nav").hide();
+                $("#open-more-nav").show();
+            });
+        });
+    </script>
+</body>
+</html>
